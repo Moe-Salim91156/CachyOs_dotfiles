@@ -1,0 +1,36 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 4,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["hyprland/taskbar, hyprland/window"],
+    "modules-right": ["cpu", "memory", "pulseaudio", "clock"],
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate"
+    },
+    "modules-center": ["hyprland/taskbar"],
+"hyprland/taskbar": {
+    "format": "{icon}",
+    "icon-size": 18,
+    "on-click": "activate"
+},
+    "hyprland/window": {
+        "separate-outputs": true
+    },
+    "cpu": {
+        "format": " {usage}%"
+    },
+    "memory": {
+        "format": " {percentage}%"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-icons": ["", "", ""]
+    },
+    "clock": {
+        "format": "{:%H:%M}"
+    }
+}
