@@ -1,27 +1,45 @@
+/* Import Pywal colors if they exist */
+@import '../../.cache/wal/colors-waybar.css';
+
 * {
-    font-family: "JetBrainsMono Nerd Font";
-    font-size: 13px;
     border: none;
-    border-radius: 0px;
+    border-radius: 0;
+    font-family: 'JetBrainsMono Nerd Font', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
 }
 
 window#waybar {
-    background-color: rgba(30, 30, 46, 0.9);
-    color: #cdd6f4;
+    background-color: transparent;
 }
 
 #workspaces button {
     padding: 0 10px;
-    color: #89b4fa;
+    margin: 5px 2px;
+    color: @color15;
+    background: rgba(30, 30, 30, 0.6);
+    border-radius: 10px;
 }
 
 #workspaces button.active {
-    background-color: #89b4fa;
-    color: #1e1e2e;
-    border-radius: 5px;
+    background: @color4; /* Pywal accent */
+    color: #ffffff;
 }
 
-#cpu, #memory, #pulseaudio, #clock {
-    padding: 0 10px;
-    color: #cba6f7;
+#clock, #cpu, #memory, #pulseaudio, #network, #tray, #window {
+    background: rgba(30, 30, 30, 0.6);
+    padding: 0 15px;
+    margin: 5px 5px;
+    border-radius: 15px;
+    color: #ffffff;
 }
+
+#window {
+    background: rgba(255, 255, 255, 0.1);
+    font-weight: bold;
+}
+
+/* Glass effect for modules */
+#clock { color: @color7; }
+#cpu { color: @color2; }
+#memory { color: @color3; }
+#pulseaudio { color: @color5; }
